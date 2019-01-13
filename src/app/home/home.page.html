@@ -4,5 +4,5 @@
 
 <ion-content padding>
   <p>Click on the image to zoom.</p>
-  <ion-img [src]="imgSource"></ion-img>
+  <ion-img [src]="imgSource" (click)="viewImage(imgSource)"></ion-img>
 </ion-content>
