@@ -6,4 +6,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [forceOverscroll]="false" color="dark"> <ion-img [src]="imgSource"></ion-img> </ion-content>
+<ion-content [forceOverscroll]="false" color="dark">
+  <ion-slides>
+    <ion-slide>
+      <div class="swiper-zoom-container"><img [src]="imgSource" /></div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
