@@ -12,7 +12,7 @@ import { ImageViewerComponent } from './component/image-viewer/image-viewer.comp
 
 @NgModule({
   declarations: [AppComponent, ImageViewerComponent],
-  entryComponents: [],
+  entryComponents: [ImageViewerComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [
     StatusBar,
