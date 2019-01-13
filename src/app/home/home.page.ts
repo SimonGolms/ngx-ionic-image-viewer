@@ -18,7 +18,7 @@ export class HomePage {
     const modal = await this.modalController.create({
       component: ImageViewerComponent,
       componentProps: { imgSource: src },
-      // cssClass: 'modal-fullscreen',
+      cssClass: 'modal-fullscreen',
       keyboardClose: true,
       showBackdrop: true
     });
