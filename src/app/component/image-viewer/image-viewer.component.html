@@ -1,3 +1,9 @@
-<p>
-  image-viewer works!
-</p>
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()"> <ion-icon slot="icon-only" name="close"></ion-icon> </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [forceOverscroll]="false" color="dark"> <ion-img [src]="imgSource"></ion-img> </ion-content>

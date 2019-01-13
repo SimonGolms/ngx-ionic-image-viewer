@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-image-viewer',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./image-viewer.component.scss']
 })
 export class ImageViewerComponent implements OnInit {
+  @Input() imgSource = '';
 
-  constructor() { }
+  constructor(private modalController: ModalController) {}
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  closeModal() {
+    this.modalController.dismiss();
   }
-
 }
