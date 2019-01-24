@@ -4,5 +4,6 @@
 
 <ion-content padding>
   <p>Click on the image to zoom.</p>
-  <ion-img [src]="imgSource" (click)="viewImage(imgSource)"></ion-img>
+  <ion-img [src]="imgSource" (click)="viewImage(imgSource, imgTitle, imgDescription)"></ion-img>
+  <ion-note>Photo by Mayur Gala on Unsplash</ion-note>
 </ion-content>

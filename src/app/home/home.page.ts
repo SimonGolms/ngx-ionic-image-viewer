@@ -8,20 +8,25 @@ import { ImageViewerComponent } from '../component/image-viewer/image-viewer.com
   styleUrls: ['home.page.scss']
 })
 export class HomePage {
-  // Get a random image
-  imgSource = 'https://picsum.photos/1000/1500/?random';
+  imgSource = './assets/silhoutte.jpg';
+  imgTitle = 'Silhoutte';
+  imgDescription = 'Photo by Mayur Gala on Unsplash';
 
   constructor(public modalController: ModalController) {}
 
-  async viewImage(src: string) {
-    console.log('HomePage viewImage()', src);
+  async viewImage(src: string, title: string = '', description: string = '') {
     const modal = await this.modalController.create({
       component: ImageViewerComponent,
-      componentProps: { imgSource: src },
+      componentProps: {
+        imgSource: src,
+        imgTitle: title,
+        imgDescription: description
+      },
       cssClass: 'modal-fullscreen',
       keyboardClose: true,
       showBackdrop: true
     });
+
     return await modal.present();
   }
 }
