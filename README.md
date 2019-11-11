@@ -1,4 +1,5 @@
-# ngx-ionic-image-viewer
+# ngx-ionic-image-viewer <!-- omit in toc -->
+
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/simongolms/ngx-ionic-image-viewer#readme" target="_blank">
@@ -14,28 +15,28 @@
 
 > An Ionic 4 Angular component to view & zoom on images and photos without any additional dependencies.
 
-## Overview
+## Demo <!-- omit in toc -->
 
-  - [Prerequisits](#prerequisits)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Properties](#properties)
-  - [Workspace](#workspace)
-    - [Development server](#development-server)
-    - [Code scaffolding](#code-scaffolding)
-    - [Build](#build)
-    - [Publishing](#publishing)
-    - [Running unit tests](#running-unit-tests)
-    - [Running end-to-end tests](#running-end-to-end-tests)
-    - [Further help](#further-help)
-  - [Author](#author)
-  - [Contributing](#contributing)
-  - [Show your support](#show-your-support)
-  - [License](#license)
-  - [Author](#author)
-  - [Contributing](#contributing)
-  - [Show your support](#show-your-support)
-  - [License](#license)
+![ngx-ionic-image-viewer-showcase](https://github.com/SimonGolms/ngx-ionic-image-viewer/blob/master/docs/showcase.gif)
+
+## Overview <!-- omit in toc -->
+
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Properties](#properties)
+- [Workspace](#workspace)
+  - [Development server](#development-server)
+  - [Code scaffolding](#code-scaffolding)
+  - [Build](#build)
+  - [Publishing](#publishing)
+  - [Running unit tests](#running-unit-tests)
+  - [Running end-to-end tests](#running-end-to-end-tests)
+  - [Further help](#further-help)
+- [Author](#author)
+- [Contributing](#contributing)
+- [Show your support](#show-your-support)
+- [License](#license)
 
 ## Prerequisites
 
@@ -68,20 +69,15 @@ import { NgxIonicImageViewerModule } from 'ngx-ionic-image-viewer';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [
-    AppRoutingModule,
-    BrowserModule,
-    IonicModule.forRoot(),
-    NgxIonicImageViewerModule
-  ],
+  imports: [AppRoutingModule, BrowserModule, IonicModule.forRoot(), NgxIonicImageViewerModule],
   providers: [
     StatusBar,
     SplashScreen,
-      { 
-        provide: RouteReuseStrategy,
-        useClass: IonicRouteStrategy
-      }
-    ],
+    {
+      provide: RouteReuseStrategy,
+      useClass: IonicRouteStrategy
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
@@ -130,7 +126,6 @@ Add `ion-img-viewer` within the HTML of your module (e.g. `home.page.html`)
   </div>
   <ion-img-viewer title="" alt="" text="" src="./assets/img/demo.jpg"></ion-img-viewer>
 </ion-content>
-
 ```
 
 ## Properties
@@ -226,27 +221,27 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 1. Run the build command every time a file change
 
-    ```bash
-    ./ngx-ionic-image-viewer-workspace $ ng build --watch
-    ```
+   ```bash
+   ./ngx-ionic-image-viewer-workspace $ ng build --watch
+   ```
 
 2. Create a local symlink using [`npm link`](https://docs.npmjs.com/cli/link) that can then be used in the project where you want to integrate the package as you don’t want to build, publish and update a library all the time while testing.
 
-    ```bash
-    ./ngx-ionic-image-viewer-workspace/dist/ngx-ionic-image-viewer $ npm link
-    ```
+   ```bash
+   ./ngx-ionic-image-viewer-workspace/dist/ngx-ionic-image-viewer $ npm link
+   ```
 
 3. Run the `npm link` command inside the projects folder to link the global installation target into your project’s node_modules folder.
 
-    ```bash
-    ./ngx-ionic-image-viewer-workspace/demo $ npm link ngx-ionic-image-viewer
-    ```
+   ```bash
+   ./ngx-ionic-image-viewer-workspace/demo $ npm link ngx-ionic-image-viewer
+   ```
 
 4. Start a local dev server for app dev/testing. Navigate to `http://localhost:8100/`. The app will automatically reload if you change any of the source files.
 
-    ```bash
-    ./ngx-ionic-image-viewer-workspace/demo $ ionic serve
-    ```
+   ```bash
+   ./ngx-ionic-image-viewer-workspace/demo $ ionic serve
+   ```
 
 ### Code scaffolding
 
