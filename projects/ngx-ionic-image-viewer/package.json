@@ -1,0 +1,42 @@
+{
+  "name": "ngx-ionic-image-viewer",
+  "version": "0.0.1",
+  "description": "An Ionic 4 Angular component to view & zoom on images and photos without any additional dependencies.",
+  "keywords": [
+    "angular",
+    "angular8",
+    "component",
+    "ngx",
+    "ionic",
+    "ionic4",
+    "ion",
+    "image",
+    "img",
+    "photo",
+    "viewer",
+    "show",
+    "view",
+    "zoom",
+    "modal",
+    "slider"
+  ],
+  "homepage": "https://github.com/simongolms/ngx-ionic-image-viewer.git",
+  "license": "MIT",
+  "author": {
+    "name": "Simon Golms",
+    "email": "development@gol.ms",
+    "url": "https://gol.ms"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simongolms/ngx-ionic-image-viewer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/simongolms/ngx-ionic-image-viewer/issues"
+  },
+  "peerDependencies": {
+    "@angular/common": "^8.2.13",
+    "@angular/core": "^8.2.13",
+    "@ionic/angular": "4.0.0"
+  }
+}
