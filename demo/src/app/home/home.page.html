@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Ionic Image Viewer Demo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="full">
+      <ion-icon slot="start" name="moon"></ion-icon>
+      <ion-label>
+        Toggle Dark Theme
+      </ion-label>
+      <ion-toggle checked="prefersDark" (ionChange)="toggleTheme()" slot="end"></ion-toggle>
+    </ion-item>
+  </ion-list>
+
+  <div class="ion-padding">
+    <ion-text>
+      Click on the image to open viewer & zoom
+    </ion-text>
+  </div>
+  <div class="ion-padding-horizontal">
+    <ion-img-viewer title="Silhoutte" text="Photo by Mayur Gala on Unsplash" src="./assets/img/silhoutte.jpg"></ion-img-viewer>
+    <ion-note class="ion-margin-top">Photo by Mayur Gala on Unsplash</ion-note>
+  </div>
+</ion-content>

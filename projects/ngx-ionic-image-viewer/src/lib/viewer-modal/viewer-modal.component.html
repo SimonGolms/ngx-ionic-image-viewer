@@ -1,0 +1,24 @@
+<ion-header [ngClass]="{ 'no-title': title.length <= 0 }">
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="closeModal()"> <ion-icon slot="icon-only" name="close"></ion-icon> </ion-button>
+    </ion-buttons>
+    <ion-title>{{ title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [forceOverscroll]="false" fullscreen="true">
+  <ion-slides [options]="options" #sliderRef>
+    <ion-slide>
+      <div class="swiper-zoom-container">
+        <img alt="alt" [src]="src" height="100vh" />
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<ion-footer [ngClass]="{ 'no-text': text.length <= 0 }">
+  <ion-toolbar class="ion-text-center">
+    <ion-text>{{ text }}</ion-text>
+  </ion-toolbar>
+</ion-footer>
