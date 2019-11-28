@@ -1,12 +1,20 @@
 # ngx-ionic-image-viewer <!-- omit in toc -->
 
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.0.1-blue.svg?cacheSeconds=2592000" />
+  <a href="https://www.npmjs.com/package/ngx-ionic-image-viewer" target="_blank">
+    <img alt="NPM Version" src="https://img.shields.io/npm/v/ngx-ionic-image-viewer.svg" />
+  </a>
   <a href="https://github.com/simongolms/ngx-ionic-image-viewer#readme" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="https://github.com/simongolms/ngx-ionic-image-viewer/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+  </a>
+  <a href="https://conventionalcommits.org" target="_blank">
+    <img alt="Conventional Commits" src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" />
+  </a>
+  <a href="https://github.com/conventional-changelog/standard-version" target="_blank">
+    <img alt="Standard Version" src="https://img.shields.io/badge/release-standard%20version-brightgreen.svg" />
   </a>
   <a href="https://github.com/simongolms/ngx-ionic-image-viewer/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/github/license/simongolms/ngx-ionic-image-viewer" />
@@ -29,6 +37,7 @@
   - [Development server](#development-server)
   - [Code scaffolding](#code-scaffolding)
   - [Build](#build)
+  - [Release](#release)
   - [Publishing](#publishing)
   - [Running unit tests](#running-unit-tests)
   - [Running end-to-end tests](#running-end-to-end-tests)
@@ -251,9 +260,17 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+> Check `package.json` for lifecycle events
+
+### Release
+
+Run `npm release` to create a new release with `standard-version`. This bumps the version of `projects/ngx-ionic-image-viewer/package.json`, uses [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) to update CHANGELOG.md, commits package.json and CHANGELOG.md and tags a new release.
+
+> Check `package.json` and `.versionrc` for lifecycle events
+
 ### Publishing
 
-After building your library with `ng build ngx-wordpress`, go to the dist folder `cd dist/ngx-wordpress` and run `npm publish`.
+After building your library with `ng build ngx-ionic-image-viewer`, go to the dist folder `cd dist/ngx-ionic-image-viewer` and run `npm publish`.
 
 ### Running unit tests
 
