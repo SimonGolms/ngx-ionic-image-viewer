@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "postchangelog": "cp CHANGELOG.md ./../../",
+    "precommit": "git add ./../../CHANGELOG.md"
+  }
+}
