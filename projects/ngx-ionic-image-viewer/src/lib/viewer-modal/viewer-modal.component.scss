@@ -10,6 +10,7 @@ ion-toolbar {
 }
 
 ion-header {
+  opacity: 1;
   position: absolute;
   &.no-title {
     &:after {
