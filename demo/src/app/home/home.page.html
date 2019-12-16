@@ -17,7 +17,7 @@
     <ion-text>
       <h2>Default</h2>
     </ion-text>
-    <ion-img-viewer src="./assets/img/silhoutte.jpg"></ion-img-viewer>
+    <ion-img-viewer [src]="imgUrl"></ion-img-viewer>
 
     <br />
     <br />
@@ -28,12 +28,7 @@
     <ion-text>
       <h3>Auto (default)</h3>
     </ion-text>
-    <ion-img-viewer
-      title="Silhoutte (Scheme / Auto)"
-      text="Photo by Mayur Gala on Unsplash"
-      src="../../assets/img/silhoutte.jpg"
-      scheme="auto"
-    ></ion-img-viewer>
+    <ion-img-viewer title="Silhoutte (Scheme / Auto)" text="Photo by Mayur Gala on Unsplash" [src]="imgUrl" scheme="auto"></ion-img-viewer>
     <br />
     <ion-list>
       <ion-item lines="full">
@@ -48,12 +43,7 @@
     <ion-text>
       <h3>Dark</h3>
     </ion-text>
-    <ion-img-viewer
-      title="Silhoutte (Scheme / Dark)"
-      text="Photo by Mayur Gala on Unsplash"
-      src="./assets/img/silhoutte.jpg"
-      scheme="dark"
-    ></ion-img-viewer>
+    <ion-img-viewer title="Silhoutte (Scheme / Dark)" text="Photo by Mayur Gala on Unsplash" [src]="imgUrl" scheme="dark"></ion-img-viewer>
     <br />
     <ion-text>
       <h3>Light</h3>
@@ -61,7 +51,7 @@
     <ion-img-viewer
       title="Silhoutte (Scheme / Light)"
       text="Photo by Mayur Gala on Unsplash"
-      src="./assets/img/silhoutte.jpg"
+      [src]="imgUrl"
       scheme="light"
     ></ion-img-viewer>
     <br />
@@ -75,7 +65,7 @@
     <ion-img-viewer
       title="Silhoutte (slideOptions / zoom 7x)"
       text="Photo by Mayur Gala on Unsplash"
-      src="./assets/img/silhoutte.jpg"
+      [src]="imgUrl"
       [slideOptions]="{ zoom: { maxRatio: 7}}"
     ></ion-img-viewer>
     <br />

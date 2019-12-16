@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonToggle } from '@ionic/angular';
 
 @Component({
@@ -8,6 +8,9 @@ import { IonToggle } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
   prefersDark = false;
+
+  // imgUrl = `./../../assets/img/silhoutte.jpg`; // Use for local development
+  imgUrl = `https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?&q=80`;
 
   constructor() {}
 
