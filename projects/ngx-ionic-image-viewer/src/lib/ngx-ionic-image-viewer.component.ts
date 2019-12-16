@@ -26,21 +26,23 @@ import { ViewerModalComponent } from './viewer-modal/viewer-modal.component';
   encapsulation: ViewEncapsulation.None
 })
 export class NgxIonicImageViewerComponent implements OnInit {
-  @Input() src: string;
   @Input() alt?: string;
-  @Input() title?: string;
-  @Input() text?: string;
+  @Input() scheme?: string;
   @Input() slideOptions?: object;
+  @Input() src: string;
+  @Input() text?: string;
+  @Input() title?: string;
 
   constructor(public modalController: ModalController) {}
 
-  async viewImage(src: string, title: string = '', text: string = '', slideOptions: object = {}) {
+  async viewImage(src: string, title: string = '', text: string = '', scheme: string = 'auto', slideOptions: object = {}) {
     const modal = await this.modalController.create({
       component: ViewerModalComponent,
       componentProps: {
         src,
         title,
         text,
+        scheme,
         slideOptions
       },
       cssClass: 'modal-fullscreen',

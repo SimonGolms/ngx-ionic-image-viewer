@@ -164,13 +164,37 @@ Add `ion-img-viewer` within the HTML of your module (e.g. `home.page.html`)
     <!-- slideOptions -->
     <thead>
         <tr>
+            <th colspan="2" align="left"><h3>scheme</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Description</td>
+            <td>Sets the color scheme.</td>
+        </tr>
+        <tr>
+            <td>Attribute</td>
+            <td><code>scheme</code></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><code>"auto"</code> | <code>"dark"</code> | <code>"light"</code> | <code>undefined</code></td>
+        </tr>
+        <tr>
+            <td>Default</td>
+            <td><code>"auto"</code></td>
+        </tr>
+    </tbody>
+    <!-- slideOptions -->
+    <thead>
+        <tr>
             <th colspan="2" align="left"><h3>slideOptions</h3></th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Description</td>
-            <td>Options to pass to the swiper instance. See <a>http://idangero.us/swiper/api/</a> for valid options</td>
+            <td>Options to pass to the swiper instance. See <a>http://idangero.us/swiper/api/</a> for valid options.</td>
         </tr>
         <tr>
             <td>Attribute</td>
@@ -214,7 +238,7 @@ Add `ion-img-viewer` within the HTML of your module (e.g. `home.page.html`)
     <tbody>
         <tr>
             <td>Description</td>
-            <td>Sets the text in the footer of the viewer </td>
+            <td>Sets the text in the footer of the viewer.</td>
         </tr>
         <tr>
             <td>Attribute</td>
