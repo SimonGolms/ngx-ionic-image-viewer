@@ -7,23 +7,81 @@
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item lines="full">
-      <ion-icon slot="start" name="moon"></ion-icon>
-      <ion-label>
-        Toggle Dark Theme
-      </ion-label>
-      <ion-toggle checked="prefersDark" (ionChange)="toggleTheme()" slot="end"></ion-toggle>
-    </ion-item>
-  </ion-list>
-
   <div class="ion-padding">
     <ion-text>
       Click on the image to open viewer & zoom
     </ion-text>
   </div>
   <div class="ion-padding-horizontal">
-    <ion-img-viewer title="Silhoutte" text="Photo by Mayur Gala on Unsplash" src="./assets/img/silhoutte.jpg"></ion-img-viewer>
-    <ion-note class="ion-margin-top">Photo by Mayur Gala on Unsplash</ion-note>
+    <!-- DEFAULT -->
+    <ion-text>
+      <h2>Default</h2>
+    </ion-text>
+    <ion-img-viewer src="./assets/img/silhoutte.jpg"></ion-img-viewer>
+
+    <br />
+    <br />
+    <!-- SCHEME -->
+    <ion-text>
+      <h2>Scheme</h2>
+    </ion-text>
+    <ion-text>
+      <h3>Auto (default)</h3>
+    </ion-text>
+    <ion-img-viewer
+      title="Silhoutte (Scheme / Auto)"
+      text="Photo by Mayur Gala on Unsplash"
+      src="../../assets/img/silhoutte.jpg"
+      scheme="auto"
+    ></ion-img-viewer>
+    <br />
+    <ion-list>
+      <ion-item lines="full">
+        <ion-icon slot="start" name="moon"></ion-icon>
+        <ion-label>
+          Toggle Dark Theme
+        </ion-label>
+        <ion-toggle checked="prefersDark" (ionChange)="toggleTheme()" slot="end"></ion-toggle>
+      </ion-item>
+    </ion-list>
+    <br />
+    <ion-text>
+      <h3>Dark</h3>
+    </ion-text>
+    <ion-img-viewer
+      title="Silhoutte (Scheme / Dark)"
+      text="Photo by Mayur Gala on Unsplash"
+      src="./assets/img/silhoutte.jpg"
+      scheme="dark"
+    ></ion-img-viewer>
+    <br />
+    <ion-text>
+      <h3>Light</h3>
+    </ion-text>
+    <ion-img-viewer
+      title="Silhoutte (Scheme / Light)"
+      text="Photo by Mayur Gala on Unsplash"
+      src="./assets/img/silhoutte.jpg"
+      scheme="light"
+    ></ion-img-viewer>
+    <br />
+    <br />
+    <ion-text>
+      <h2>SlideOptions</h2>
+    </ion-text>
+    <ion-text>
+      <h3>zoom 7x</h3>
+    </ion-text>
+    <ion-img-viewer
+      title="Silhoutte (slideOptions / zoom 7x)"
+      text="Photo by Mayur Gala on Unsplash"
+      src="./assets/img/silhoutte.jpg"
+      [slideOptions]="{ zoom: { maxRatio: 7}}"
+    ></ion-img-viewer>
+    <br />
+    <br />
+    <div class="ion-padding">
+      <ion-note>Photo by Mayur Gala on Unsplash</ion-note>
+    </div>
   </div>
 </ion-content>
