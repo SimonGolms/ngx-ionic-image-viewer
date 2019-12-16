@@ -30,16 +30,18 @@ export class NgxIonicImageViewerComponent implements OnInit {
   @Input() alt?: string;
   @Input() title?: string;
   @Input() text?: string;
+  @Input() slideOptions?: object;
 
   constructor(public modalController: ModalController) {}
 
-  async viewImage(src: string, title: string = '', text: string = '') {
+  async viewImage(src: string, title: string = '', text: string = '', slideOptions: object = {}) {
     const modal = await this.modalController.create({
       component: ViewerModalComponent,
       componentProps: {
         src,
         title,
-        text
+        text,
+        slideOptions
       },
       cssClass: 'modal-fullscreen',
       keyboardClose: true,

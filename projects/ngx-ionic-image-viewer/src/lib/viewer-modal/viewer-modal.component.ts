@@ -12,20 +12,23 @@ export class ViewerModalComponent implements OnInit {
   @Input() title?: string;
   @Input() text?: string;
 
-  defaultSlideOpts = {
+  @Input() slideOptions?: object;
+
+  defaultSlideOptions = {
     centeredSlides: 'true',
     zoom: {
       enabled: true
     }
   };
 
-  @Input() options = { ...this.defaultSlideOpts };
+  options = {};
 
   @ViewChild('sliderRef', { static: true }) slides: IonSlides;
 
   constructor(private modalController: ModalController) {}
 
   ngOnInit() {
+    this.options = { ...this.defaultSlideOptions, ...this.slideOptions };
     this.slides.update();
   }
 

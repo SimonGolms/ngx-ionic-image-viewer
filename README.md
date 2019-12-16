@@ -25,7 +25,7 @@
 
 ## Demo <!-- omit in toc -->
 
-![ngx-ionic-image-viewer-showcase](https://github.com/SimonGolms/ngx-ionic-image-viewer/blob/master/docs/showcase.gif)
+![ngx-ionic-image-viewer-showcase](https://github.com/SimonGolms/ngx-ionic-image-viewer/raw/master/docs/showcase.gif)
 
 ## Overview <!-- omit in toc -->
 
@@ -154,51 +154,35 @@ Add `ion-img-viewer` within the HTML of your module (e.g. `home.page.html`)
         </tr>
         <tr>
             <td>Attribute</td>
-            <td>alt</td>
+            <td><code>alt</code></td>
         </tr>
         <tr>
             <td>Type</td>
-            <td>string | undefined</td>
+            <td><code>string</code> | <code>undefined</code></td>
         </tr>
     </tbody>
-    <!-- text -->
+    <!-- slideOptions -->
     <thead>
         <tr>
-            <th colspan="2" align="left"><h3>text</h3></th>
+            <th colspan="2" align="left"><h3>slideOptions</h3></th>
         </tr>
     </thead>
     <tbody>
         <tr>
             <td>Description</td>
-            <td>Sets the text in the footer of the viewer </td>
+            <td>Options to pass to the swiper instance. See <a>http://idangero.us/swiper/api/</a> for valid options</td>
         </tr>
         <tr>
             <td>Attribute</td>
-            <td>text</td>
+            <td><code>slideOptions</code></td>
         </tr>
         <tr>
             <td>Type</td>
-            <td>string | undefined</td>
-        </tr>
-    </tbody>
-    <!-- title -->
-    <thead>
-        <tr>
-            <th colspan="2" align="left"><h3>title</h3></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Description</td>
-            <td>Sets the title in the header of the viewer.</td>
+            <td><code>object</code> | <code>undefined</code></td>
         </tr>
         <tr>
-            <td>Attribute</td>
-            <td>title</td>
-        </tr>
-        <tr>
-            <td>Type</td>
-            <td>string | undefined</td>
+            <td>Default</td>
+            <td><code>{ centeredSlides: 'true', zoom: { enabled: true } }</code></td>
         </tr>
     </tbody>
     <!-- src -->
@@ -214,11 +198,51 @@ Add `ion-img-viewer` within the HTML of your module (e.g. `home.page.html`)
         </tr>
         <tr>
             <td>Attribute</td>
-            <td>src</td>
+            <td><code>src</code></td>
         </tr>
         <tr>
             <td>Type</td>
-            <td>string | undefined</td>
+            <td><code>string</code> | <code>undefined</code></td>
+        </tr>
+    </tbody>
+        <!-- text -->
+    <thead>
+        <tr>
+            <th colspan="2" align="left"><h3>text</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Description</td>
+            <td>Sets the text in the footer of the viewer </td>
+        </tr>
+        <tr>
+            <td>Attribute</td>
+            <td><code>text</code></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><code>string</code> | <code>undefined</code></td>
+        </tr>
+    </tbody>
+    <!-- title -->
+    <thead>
+        <tr>
+            <th colspan="2" align="left"><h3>title</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Description</td>
+            <td>Sets the title in the header of the viewer.</td>
+        </tr>
+        <tr>
+            <td>Attribute</td>
+            <td><code>title</code></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><code>string</code> | <code>undefined</code></td>
         </tr>
     </tbody>
 </table>
