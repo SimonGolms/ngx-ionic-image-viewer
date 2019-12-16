@@ -1,0 +1,25 @@
+{
+  "git": {
+    "requireUpstream": false,
+    "requireCleanWorkingDir": false,
+    "commitMessage": "chore: release %s",
+    "tagName": "v%s"
+  },
+  "github": {
+    "release": true
+  },
+  "npm": {
+    "release": true,
+    "publishPath": "./../../dist/ngx-ionic-image-viewer/"
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular",
+      "infile": "CHANGELOG.md"
+    }
+  },
+  "hooks": {
+    "after:bump": "cd ./../../ && npm run build",
+    "after:release": "🎉 Successfully released ${name} v${version} to ${repo.repository}."
+  }
+}
