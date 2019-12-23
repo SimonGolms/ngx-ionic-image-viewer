@@ -30,9 +30,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "prebuild": "cp README.md projects/ngx-ionic-image-viewer/ ",
     "build": "ng build",
     "demo:update": "cd demo && npm install ngx-ionic-image-viewer@latest --save && git commit -m \"chore(demo): update dependency\n\n- ngx-ionic-image-viewer@latest\" package*.json",
-    "postbuild": "cp README.md dist/ngx-ionic-image-viewer/ ",
     "release": "cd projects/ngx-ionic-image-viewer && release-it --ci",
     "release:dry-run": "cd projects/ngx-ionic-image-viewer && release-it --ci --dry-run",
     "test": "ng test",
