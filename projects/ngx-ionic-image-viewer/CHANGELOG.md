@@ -1,3 +1,16 @@
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.1.0...v0.2.0) (2019-12-23)
+
+
+### Bug Fixes
+
+* console error when moving in a zoomed image ([b292e63](https://github.com/simongolms/ngx-ionic-image-viewer/commit/b292e63)), closes [#7](https://github.com/simongolms/ngx-ionic-image-viewer/issues/7)
+
+
+### Features
+
+* use the module as ionImgViewer directive ([63decaf](https://github.com/simongolms/ngx-ionic-image-viewer/commit/63decaf))
+
 <a name="0.1.0"></a>
 # [0.1.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.0.2...v0.1.0) (2019-12-16)
 
