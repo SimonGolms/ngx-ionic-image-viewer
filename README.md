@@ -21,7 +21,7 @@
   </a>
 </p>
 
-> An Ionic 4 Angular component to view & zoom on images and photos without any additional dependencies.
+> An Ionic 4 Angular module to view & zoom on images and photos without any additional dependencies.
 
 ## Demo <!-- omit in toc -->
 
@@ -34,6 +34,9 @@
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
+  - [Import](#import)
+  - [Component](#component)
+  - [Directive](#directive)
 - [Properties](#properties)
 - [Workspace](#workspace)
   - [Development server](#development-server)
@@ -63,34 +66,19 @@ npm install --save ngx-ionic-image-viewer
 
 ## Usage
 
+### Import
+
 Import the module and add it to your imports section in your main AppModule:
 
 ```js
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
-
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
-
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
 import { NgxIonicImageViewerModule } from 'ngx-ionic-image-viewer';
 
+...
+
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [AppRoutingModule, BrowserModule, IonicModule.forRoot(), NgxIonicImageViewerModule],
-  providers: [
-    StatusBar,
-    SplashScreen,
-    {
-      provide: RouteReuseStrategy,
-      useClass: IonicRouteStrategy
-    }
+  imports: [
+    NgxIonicImageViewerModule
   ],
-  bootstrap: [AppComponent]
 })
 export class AppModule {}
 ```
@@ -104,40 +92,38 @@ import { NgxIonicImageViewerModule } from 'ngx-ionic-image-viewer';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: HomePage
-      }
-    ]),
     NgxIonicImageViewerModule
   ],
-  declarations: [HomePage]
 })
 export class HomePageModule {}
 
 ```
 
+### Component
+
 Add `ion-img-viewer` within the HTML of your module (e.g. `home.page.html`)
 
 ```html
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-img-viewer 
+  title="Demo" 
+  text="Component" 
+  scheme="dark" 
+  src="./assets/img/demo.jpg">
+</ion-img-viewer>
+```
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-  </div>
-  <ion-img-viewer title="" alt="" text="" src="./assets/img/demo.jpg"></ion-img-viewer>
-</ion-content>
+### Directive
+
+Add `ionImgViewer` as a directive within the `ion-img` HTML element of your module (e.g. `home.page.html`)
+
+```html
+<ion-img 
+  ionImgViewer 
+  title="Demo" 
+  text="Directive" 
+  scheme="light" 
+  src="./assets/img/demo.jpg">
+</ion-img>
 ```
 
 ## Properties
@@ -208,7 +194,7 @@ Add `ion-img-viewer` within the HTML of your module (e.g. `home.page.html`)
         </tr>
         <tr>
             <td>Default</td>
-            <td><code>{ centeredSlides: 'true', zoom: { enabled: true } }</code></td>
+            <td><code>{ centeredSlides: true, passiveListeners: false, zoom: { enabled: true } }</code></td>
         </tr>
     </tbody>
     <!-- src -->

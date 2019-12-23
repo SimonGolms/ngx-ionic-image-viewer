@@ -15,7 +15,8 @@ export class ViewerModalComponent implements OnInit {
   @Input() title?: string;
 
   defaultSlideOptions = {
-    centeredSlides: 'true',
+    centeredSlides: true,
+    passiveListeners: false,
     zoom: {
       enabled: true
     }
