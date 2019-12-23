@@ -33,8 +33,8 @@
     "prebuild": "cp README.md projects/ngx-ionic-image-viewer/ ",
     "build": "ng build",
     "demo:update": "cd demo && npm install ngx-ionic-image-viewer@latest --save && git commit -m \"chore(demo): update dependency\n\n- ngx-ionic-image-viewer@latest\" package*.json",
-    "release": "cd projects/ngx-ionic-image-viewer && release-it --ci",
-    "release:dry-run": "cd projects/ngx-ionic-image-viewer && release-it --ci --dry-run",
+    "release": "dotenv -- bash -c \"cd projects/ngx-ionic-image-viewer && release-it --ci\"",
+    "release:dry-run": "dotenv -- bash -c \"cd projects/ngx-ionic-image-viewer && release-it --ci --dry-run\"",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -71,6 +71,7 @@
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "~13.1.0",
     "codelyzer": "^5.2.1",
+    "dotenv-cli": "^3.1.0",
     "husky": "^3.1.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
