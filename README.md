@@ -208,7 +208,7 @@ Add `ion-img-viewer` within the HTML of your module (e.g. `home.page.html`)
         </tr>
         <tr>
             <td>Default</td>
-            <td><code>{ centeredSlides: 'true', zoom: { enabled: true } }</code></td>
+            <td><code>{ centeredSlides: true, passiveListeners: false, zoom: { enabled: true } }</code></td>
         </tr>
     </tbody>
     <!-- src -->
