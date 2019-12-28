@@ -39,7 +39,7 @@
   - [Directive](#directive)
 - [Properties](#properties)
 - [Workspace](#workspace)
-  - [Development server](#development-server)
+  - [Local Development](#local-development)
   - [Code scaffolding](#code-scaffolding)
   - [Build](#build)
   - [Release](#release)
@@ -283,31 +283,23 @@ Add `ionImgViewer` as a directive within the `ion-img` HTML element of your modu
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
 
-### Development server
+### Local Development
 
-1. Run the build command every time a file change
-
-   ```bash
-   ./ngx-ionic-image-viewer-workspace $ ng build --watch
-   ```
-
-2. Create a local symlink using [`npm link`](https://docs.npmjs.com/cli/link) that can then be used in the project where you want to integrate the package as you don’t want to build, publish and update a library all the time while testing.
+1. Run the command to start the build every time a file change: 
 
    ```bash
-   ./ngx-ionic-image-viewer-workspace/dist/ngx-ionic-image-viewer $ npm link
+   npm run build:watch
    ```
 
-3. Run the `npm link` command inside the projects folder to link the global installation target into your project’s node_modules folder.
+2. Run the command to create a local symlink and start a local dev server fo app dev/testing.
 
    ```bash
-   ./ngx-ionic-image-viewer-workspace/demo $ npm link ngx-ionic-image-viewer
+   npm run ionic:serve
    ```
 
-4. Start a local dev server for app dev/testing. Navigate to `http://localhost:8100/`. The app will automatically reload if you change any of the source files.
-
-   ```bash
-   ./ngx-ionic-image-viewer-workspace/demo $ ionic serve
-   ```
+   - [`npm link`](https://docs.npmjs.com/cli/link): Create a local symlink that can then be used in the project where you want to integrate the package as you don’t want to build, publish and update a library all the time while testing.
+   - Run the command `npm link ngx-ionic-image-viewer` inside the projects folder to link the global installation target into your project’s `node_modules` folder.
+   - [`ionic serve`](https://ionicframework.com/docs/cli/commands/serve): Start a local dev server for app dev/testing. Navigate to `http://localhost:8100/`. The app will automatically reload if you change any of the source files.
 
 ### Code scaffolding
 

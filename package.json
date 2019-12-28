@@ -34,8 +34,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "ionic:serve": "npm link dist/ngx-ionic-image-viewer/ && cd demo && npm link ngx-ionic-image-viewer && ionic serve",
     "prebuild": "cp README.md projects/ngx-ionic-image-viewer/ ",
     "build": "ng build",
+    "build:watch": "ng build --watch",
     "demo:update": "cd demo && npm install ngx-ionic-image-viewer@latest --save && git commit -m \"chore(demo): update dependency\n\n- ngx-ionic-image-viewer@latest\" package*.json",
     "release": "dotenv -- bash -c \"cd projects/ngx-ionic-image-viewer && release-it --ci\"",
     "release:dry-run": "dotenv -- bash -c \"cd projects/ngx-ionic-image-viewer && release-it --ci --dry-run\"",
