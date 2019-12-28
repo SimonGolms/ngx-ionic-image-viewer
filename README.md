@@ -217,7 +217,27 @@ Add `ionImgViewer` as a directive within the `ion-img` HTML element of your modu
             <td><code>string</code> | <code>undefined</code></td>
         </tr>
     </tbody>
-        <!-- text -->
+    <!-- srcHighRes -->
+    <thead>
+        <tr>
+            <th colspan="2" align="left"><h3>srcHighRes</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Description</td>
+            <td>The Image URL to display a high-resolution image instead of the original image when opening the viewer.</td>
+        </tr>
+        <tr>
+            <td>Attribute</td>
+            <td><code>srcHighRes</code></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><code>string</code> | <code>undefined</code></td>
+        </tr>
+    </tbody>
+    <!-- text -->
     <thead>
         <tr>
             <th colspan="2" align="left"><h3>text</h3></th>
