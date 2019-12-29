@@ -1,3 +1,11 @@
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.2.0...v0.3.0) (2019-12-29)
+
+
+### Features
+
+* add props srcHighRes to display high-resolution image ([efe182c](https://github.com/simongolms/ngx-ionic-image-viewer/commit/efe182c))
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.1.0...v0.2.0) (2019-12-23)
 
