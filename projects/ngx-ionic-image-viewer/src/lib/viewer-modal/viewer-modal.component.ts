@@ -11,6 +11,7 @@ export class ViewerModalComponent implements OnInit {
   @Input() scheme?: string;
   @Input() slideOptions?: object;
   @Input() src: string;
+  @Input() srcHighRes?: string;
   @Input() text?: string;
   @Input() title?: string;
 
@@ -26,12 +27,11 @@ export class ViewerModalComponent implements OnInit {
 
   @ViewChild('sliderRef', { static: true }) slides: IonSlides;
 
-  constructor(private modalController: ModalController) {
-    // this.setScheme(this.scheme);
-  }
+  constructor(private modalController: ModalController) {}
 
   ngOnInit() {
     this.options = { ...this.defaultSlideOptions, ...this.slideOptions };
+    this.src = this.srcHighRes || this.src;
     this.setScheme(this.scheme);
     this.slides.update();
   }
