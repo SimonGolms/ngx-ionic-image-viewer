@@ -1,12 +1,12 @@
-import { Directive, ElementRef, HostListener, Input } from '@angular/core';
+import { Directive, ElementRef, HostListener, Input, Renderer2, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { ViewerModalComponent } from './viewer-modal/viewer-modal.component';
 
 @Directive({
   selector: '[ionImgViewer]'
 })
-export class NgxIonicImageViewerDirective {
-  constructor(private el: ElementRef, public modalController: ModalController) {}
+export class NgxIonicImageViewerDirective implements OnInit {
+  constructor(private el: ElementRef, private renderer: Renderer2, public modalController: ModalController) {}
 
   @Input() scheme?: string;
   @Input() slideOptions?: object;
@@ -17,6 +17,12 @@ export class NgxIonicImageViewerDirective {
 
   @HostListener('click') onClick() {
     this.viewImage(this.src, this.srcHighRes, this.title, this.text, this.scheme, this.slideOptions);
+  }
+
+  ngOnInit() {
+    if (!this.el.nativeElement.hasAttribute('src')) {
+      this.renderer.setAttribute(this.el.nativeElement, 'src', this.src);
+    }
   }
 
   async viewImage(

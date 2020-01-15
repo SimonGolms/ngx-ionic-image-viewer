@@ -7,22 +7,6 @@ import { ViewerModalComponent } from './viewer-modal/viewer-modal.component';
 @Component({
   selector: 'ion-img-viewer',
   templateUrl: './ngx-ionic-image-viewer.component.html',
-  styles: [
-    `
-      .modal-fullscreen {
-        --border-radius: 0;
-        border-radius: 0;
-      }
-      .modal-fullscreen .modal-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block;
-        width: 100%;
-        height: 100%;
-      }
-    `
-  ],
   encapsulation: ViewEncapsulation.None
 })
 export class NgxIonicImageViewerComponent implements OnInit {
