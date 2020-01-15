@@ -1,3 +1,16 @@
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.3.0...v0.4.0) (2020-01-15)
+
+
+### Bug Fixes
+
+* **directive:** open viewer in fullscreen on desktop ([6e078b9](https://github.com/simongolms/ngx-ionic-image-viewer/commit/6e078b9))
+
+
+### Features
+
+* **directive:** use directive on img element ([b162aad](https://github.com/simongolms/ngx-ionic-image-viewer/commit/b162aad)), closes [#10](https://github.com/simongolms/ngx-ionic-image-viewer/issues/10)
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.2.0...v0.3.0) (2019-12-29)
 
