@@ -32,8 +32,17 @@ export class ViewerModalComponent implements OnInit {
   ngOnInit() {
     this.options = { ...this.defaultSlideOptions, ...this.slideOptions };
     this.src = this.srcHighRes || this.src;
+    this.setStyle();
     this.setScheme(this.scheme);
+
     this.slides.update();
+  }
+
+  setStyle() {
+    const el: HTMLElement = document.querySelector('.modal-fullscreen');
+    el.style.setProperty('--height', '100%');
+    el.style.setProperty('--width', '100%');
+    el.style.setProperty('--border-radius', '0');
   }
 
   setScheme(scheme: string) {
