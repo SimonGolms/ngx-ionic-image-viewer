@@ -18,7 +18,6 @@
       <h2>Default</h2>
     </ion-text>
     <ion-img-viewer [src]="imgUrl"></ion-img-viewer>
-
     <br />
     <br />
     <!-- SCHEME -->
@@ -74,11 +73,43 @@
     <ion-text>
       <h2>Directive</h2>
     </ion-text>
+    <ion-text>
+      <h3>ion-img</h3>
+    </ion-text>
     <ion-img ionImgViewer scheme="light" [src]="imgUrl" title="Directive ionImgViewer" text="Photo by Mayur Gala on Unsplash"></ion-img>
     <br />
     <br />
-    <div class="ion-padding">
-      <ion-note>Photo by Mayur Gala on Unsplash</ion-note>
+    <ion-text>
+      <h3>ion-avatar</h3>
+    </ion-text>
+    <ion-item>
+      <ion-avatar slot="start">
+        <img
+          ionImgViewer
+          [src]="imgAvatar.src"
+          [srcHighRes]="imgAvatar.srcHighRes"
+          title="Directive ion-avatar"
+          [text]="imgAvatar.author"
+        />
+      </ion-avatar>
+      <ion-label>Awesome Dog</ion-label>
+    </ion-item>
+    <br />
+    <br />
+    <ion-text>
+      <h3>ion-thumbnail</h3>
+    </ion-text>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img ionImgViewer [src]="imgThumbnail.src" [srcHighRes]="imgThumbnail.srcHighRes" [text]="imgThumbnail.author" />
+      </ion-thumbnail>
+      <ion-label>Photo by {{imgThumbnail.author}}</ion-label>
+    </ion-item>
+    <ion-text>
+      <h3>img</h3>
+    </ion-text>
+    <div class="ion-text-center">
+      <img ionImgViewer [src]="imgUrl" title="Directive img" text="Photo by Mayur Gala on Unsplash" width="50%" />
     </div>
   </div>
 </ion-content>
