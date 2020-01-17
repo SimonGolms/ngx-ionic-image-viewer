@@ -7,7 +7,14 @@ import { ViewerModalComponent } from './viewer-modal/viewer-modal.component';
 @Component({
   selector: 'ion-img-viewer',
   templateUrl: './ngx-ionic-image-viewer.component.html',
-  encapsulation: ViewEncapsulation.None
+  styles: [
+    `
+      :host {
+        display: block;
+      }
+    `
+  ],
+  encapsulation: ViewEncapsulation.Emulated
 })
 export class NgxIonicImageViewerComponent implements OnInit {
   @Input() alt?: string;
