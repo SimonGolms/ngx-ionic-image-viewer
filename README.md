@@ -42,8 +42,8 @@
   - [Local Development](#local-development)
   - [Code scaffolding](#code-scaffolding)
   - [Build](#build)
-  - [Release](#release)
-  - [Publishing](#publishing)
+  - [Release & Publishing](#release--publishing)
+  - [Manual Publishing](#manual-publishing)
   - [Running unit tests](#running-unit-tests)
   - [Running end-to-end tests](#running-end-to-end-tests)
   - [Further help](#further-help)
@@ -311,13 +311,15 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 > Check `package.json` for lifecycle events
 
-### Release
+### Release & Publishing
 
-Run `npm release` to create a new release with `standard-version`. This bumps the version of `projects/ngx-ionic-image-viewer/package.json`, uses [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) to update CHANGELOG.md, commits package.json and CHANGELOG.md and tags a new release.
+Run `npm run release` to create a new build & release with `release-it`. This bumps the version of `projects/ngx-ionic-image-viewer/package.json`, uses [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) to update CHANGELOG.md, commits package.json and CHANGELOG.md and tags a new release. The new release gets published to GitHub and npm automatically.
 
-> Check `package.json` and `.versionrc` for lifecycle events
+> Check `package.json` and `.release-it.json` for lifecycle events
 
-### Publishing
+Once the confirmation of npm has been received, the command `npm run demo:update` can be run to update the demo to the latest version and commit the change.
+
+### Manual Publishing
 
 After building your library with `ng build ngx-ionic-image-viewer`, go to the dist folder `cd dist/ngx-ionic-image-viewer` and run `npm publish`.
 
