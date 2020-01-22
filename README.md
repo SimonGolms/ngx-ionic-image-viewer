@@ -237,6 +237,30 @@ Add `ionImgViewer` as a directive within the `ion-img` HTML element of your modu
             <td><code>string</code> | <code>undefined</code></td>
         </tr>
     </tbody>
+    <!-- swipeToClose -->
+    <thead>
+        <tr>
+            <th colspan="2" align="left"><h3>swipeToClose</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Description</td>
+            <td>Swipe down to close the viewer.</td>
+        </tr>
+        <tr>
+            <td>Attribute</td>
+            <td><code>swipeToClose</code></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><code>boolean</code> | <code>undefined</code></td>
+        </tr>
+        <tr>
+            <td>Default</td>
+            <td><code>true</code></td>
+        </tr>
+    </tbody>
     <!-- text -->
     <thead>
         <tr>

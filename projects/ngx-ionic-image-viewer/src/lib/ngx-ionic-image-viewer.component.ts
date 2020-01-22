@@ -22,6 +22,7 @@ export class NgxIonicImageViewerComponent implements OnInit {
   @Input() slideOptions?: object;
   @Input() src: string;
   @Input() srcHighRes?: string;
+  @Input() swipeToClose?: boolean;
   @Input() text?: string;
   @Input() title?: string;
 
@@ -33,7 +34,8 @@ export class NgxIonicImageViewerComponent implements OnInit {
     title: string = '',
     text: string = '',
     scheme: string = 'auto',
-    slideOptions: object = {}
+    slideOptions: object = {},
+    swipeToClose: boolean = true
   ) {
     const modal = await this.modalController.create({
       component: ViewerModalComponent,
@@ -43,7 +45,8 @@ export class NgxIonicImageViewerComponent implements OnInit {
         title,
         text,
         scheme,
-        slideOptions
+        slideOptions,
+        swipeToClose
       },
       cssClass: 'modal-fullscreen',
       keyboardClose: true,
