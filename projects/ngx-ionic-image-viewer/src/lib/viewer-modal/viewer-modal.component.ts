@@ -128,7 +128,6 @@ export class ViewerModalComponent implements OnInit {
       startY: pageY,
       startTime: new Date().getTime()
     };
-    event.preventDefault();
   }
 
   swipeMove(event) {
@@ -191,6 +190,7 @@ export class ViewerModalComponent implements OnInit {
     if (swipeType === 'down') {
       return this.closeModal();
     }
+  }
 
     event.preventDefault();
   }
