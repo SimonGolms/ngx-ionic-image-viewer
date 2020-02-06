@@ -1,3 +1,11 @@
+<a name="0.5.1"></a>
+## [0.5.1](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.5.0...v0.5.1) (2020-02-06)
+
+
+### Bug Fixes
+
+* **directive:** failing production build ([d56b420](https://github.com/simongolms/ngx-ionic-image-viewer/commit/d56b420))
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.4.0...v0.5.0) (2020-02-06)
 
