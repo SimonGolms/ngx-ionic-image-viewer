@@ -21,7 +21,7 @@ export class NgxIonicImageViewerDirective implements OnInit {
     this.viewImage(this.src, this.srcFallback, this.srcHighRes, this.title, this.text, this.scheme, this.slideOptions, this.swipeToClose);
   }
 
-  @HostListener('error') onError(error) {
+  @HostListener('error', ['$event']) onError(error) {
     if (this.src !== this.el.nativeElement.src) {
       this.src = this.el.nativeElement.src;
     }
