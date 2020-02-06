@@ -1,3 +1,18 @@
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.4.0...v0.5.0) (2020-02-06)
+
+
+### Bug Fixes
+
+* ignore close button when swipeToClose is active ([969d7e8](https://github.com/simongolms/ngx-ionic-image-viewer/commit/969d7e8))
+* styling of the component via css ([a8919d6](https://github.com/simongolms/ngx-ionic-image-viewer/commit/a8919d6))
+
+
+### Features
+
+* show alternative image on error ([8bb29a4](https://github.com/simongolms/ngx-ionic-image-viewer/commit/8bb29a4)), closes [#13](https://github.com/simongolms/ngx-ionic-image-viewer/issues/13)
+* swipe down to close the viewer ([ebc756c](https://github.com/simongolms/ngx-ionic-image-viewer/commit/ebc756c))
+
 <a name="0.4.0"></a>
 # [0.4.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.3.0...v0.4.0) (2020-01-15)
 

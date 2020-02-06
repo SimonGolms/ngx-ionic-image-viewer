@@ -1,6 +1,6 @@
 {
   "name": "ngx-ionic-image-viewer",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "description": "An Ionic 4 Angular module to view & zoom on images and photos without any additional dependencies.",
   "keywords": [
     "ionic",

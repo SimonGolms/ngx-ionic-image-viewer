@@ -42,8 +42,8 @@
   - [Local Development](#local-development)
   - [Code scaffolding](#code-scaffolding)
   - [Build](#build)
-  - [Release](#release)
-  - [Publishing](#publishing)
+  - [Release & Publishing](#release--publishing)
+  - [Manual Publishing](#manual-publishing)
   - [Running unit tests](#running-unit-tests)
   - [Running end-to-end tests](#running-end-to-end-tests)
   - [Further help](#further-help)
@@ -206,11 +206,31 @@ Add `ionImgViewer` as a directive within the `ion-img` HTML element of your modu
     <tbody>
         <tr>
             <td>Description</td>
-            <td>The image URL. This attribute is mandatory for the <code>&lt;img&gt;</code> element.</td>
+            <td>The image url. This attribute is mandatory for the <code>&lt;img&gt;</code> element.</td>
         </tr>
         <tr>
             <td>Attribute</td>
             <td><code>src</code></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><code>string</code> | <code>undefined</code></td>
+        </tr>
+    </tbody>
+    <!-- srcFallback -->
+    <thead>
+        <tr>
+            <th colspan="2" align="left"><h3>srcFallback</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Description</td>
+            <td>The image url to display an alternative image in case the original image could not be loaded. Similiar to <code>(error)="src=./assets/no-image.png"</code></td>
+        </tr>
+        <tr>
+            <td>Attribute</td>
+            <td><code>srcFallback</code></td>
         </tr>
         <tr>
             <td>Type</td>
@@ -226,7 +246,7 @@ Add `ionImgViewer` as a directive within the `ion-img` HTML element of your modu
     <tbody>
         <tr>
             <td>Description</td>
-            <td>The Image URL to display a high-resolution image instead of the original image when opening the viewer.</td>
+            <td>The image url to display a high-resolution image instead of the original image when opening the viewer.</td>
         </tr>
         <tr>
             <td>Attribute</td>
@@ -235,6 +255,30 @@ Add `ionImgViewer` as a directive within the `ion-img` HTML element of your modu
         <tr>
             <td>Type</td>
             <td><code>string</code> | <code>undefined</code></td>
+        </tr>
+    </tbody>
+    <!-- swipeToClose -->
+    <thead>
+        <tr>
+            <th colspan="2" align="left"><h3>swipeToClose</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Description</td>
+            <td>Swipe down to close the viewer.</td>
+        </tr>
+        <tr>
+            <td>Attribute</td>
+            <td><code>swipeToClose</code></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><code>boolean</code> | <code>undefined</code></td>
+        </tr>
+        <tr>
+            <td>Default</td>
+            <td><code>true</code></td>
         </tr>
     </tbody>
     <!-- text -->
@@ -311,13 +355,15 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 > Check `package.json` for lifecycle events
 
-### Release
+### Release & Publishing
 
-Run `npm release` to create a new release with `standard-version`. This bumps the version of `projects/ngx-ionic-image-viewer/package.json`, uses [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) to update CHANGELOG.md, commits package.json and CHANGELOG.md and tags a new release.
+Run `npm run release` to create a new build & release with `release-it`. This bumps the version of `projects/ngx-ionic-image-viewer/package.json`, uses [conventional-changelog](https://github.com/conventional-changelog/conventional-changelog) to update CHANGELOG.md, commits package.json and CHANGELOG.md and tags a new release. The new release gets published to GitHub and npm automatically.
 
-> Check `package.json` and `.versionrc` for lifecycle events
+> Check `package.json` and `.release-it.json` for lifecycle events
 
-### Publishing
+Once the confirmation of npm has been received, the command `npm run demo:update` can be run to update the demo to the latest version and commit the change.
+
+### Manual Publishing
 
 After building your library with `ng build ngx-ionic-image-viewer`, go to the dist folder `cd dist/ngx-ionic-image-viewer` and run `npm publish`.
 
