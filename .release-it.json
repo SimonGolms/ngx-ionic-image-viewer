@@ -20,7 +20,7 @@
   },
   "hooks": {
     "after:bump": "cd ./../../ && npm run build",
-    "after:changelog": "cp CHANGELOG.md ./../",
+    "after:changelog": "cp CHANGELOG.md ./../../",
     "after:release": "echo 🎉 Successfully released ${name} v${version} to ${repo.repository}."
   }
 }

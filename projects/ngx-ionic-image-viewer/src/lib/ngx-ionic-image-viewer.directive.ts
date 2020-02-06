@@ -11,12 +11,23 @@ export class NgxIonicImageViewerDirective implements OnInit {
   @Input() scheme?: string;
   @Input() slideOptions?: object;
   @Input() src: string;
+  @Input() srcFallback?: string;
   @Input() srcHighRes?: string;
+  @Input() swipeToClose?: boolean;
   @Input() text?: string;
   @Input() title?: string;
 
   @HostListener('click') onClick() {
-    this.viewImage(this.src, this.srcHighRes, this.title, this.text, this.scheme, this.slideOptions);
+    this.viewImage(this.src, this.srcFallback, this.srcHighRes, this.title, this.text, this.scheme, this.slideOptions, this.swipeToClose);
+  }
+
+  @HostListener('error') onError(error) {
+    if (this.src !== this.el.nativeElement.src) {
+      this.src = this.el.nativeElement.src;
+    }
+    if (this.srcFallback) {
+      this.renderer.setAttribute(this.el.nativeElement, 'src', this.srcFallback);
+    }
   }
 
   ngOnInit() {
@@ -27,21 +38,25 @@ export class NgxIonicImageViewerDirective implements OnInit {
 
   async viewImage(
     src: string,
+    srcFallback: string = '',
     srcHighRes: string = '',
     title: string = '',
     text: string = '',
     scheme: string = 'auto',
-    slideOptions: object = {}
+    slideOptions: object = {},
+    swipeToClose: boolean = true
   ) {
     const modal = await this.modalController.create({
       component: ViewerModalComponent,
       componentProps: {
         src,
+        srcFallback,
         srcHighRes,
         title,
         text,
         scheme,
-        slideOptions
+        slideOptions,
+        swipeToClose
       },
       cssClass: 'modal-fullscreen',
       keyboardClose: true,
