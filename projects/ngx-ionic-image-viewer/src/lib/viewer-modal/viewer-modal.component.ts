@@ -11,6 +11,7 @@ export class ViewerModalComponent implements OnInit {
   @Input() scheme?: string;
   @Input() slideOptions?: object;
   @Input() src: string;
+  @Input() srcFallback?: string;
   @Input() srcHighRes?: string;
   @Input() swipeToClose?: boolean;
   @Input() text?: string;
@@ -192,7 +193,10 @@ export class ViewerModalComponent implements OnInit {
     }
   }
 
-    event.preventDefault();
+  onError(error) {
+    if (this.srcFallback) {
+      this.src = this.srcFallback;
+    }
   }
 
   closeModal() {

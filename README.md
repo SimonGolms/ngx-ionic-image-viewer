@@ -206,11 +206,31 @@ Add `ionImgViewer` as a directive within the `ion-img` HTML element of your modu
     <tbody>
         <tr>
             <td>Description</td>
-            <td>The image URL. This attribute is mandatory for the <code>&lt;img&gt;</code> element.</td>
+            <td>The image url. This attribute is mandatory for the <code>&lt;img&gt;</code> element.</td>
         </tr>
         <tr>
             <td>Attribute</td>
             <td><code>src</code></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><code>string</code> | <code>undefined</code></td>
+        </tr>
+    </tbody>
+    <!-- srcFallback -->
+    <thead>
+        <tr>
+            <th colspan="2" align="left"><h3>srcFallback</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Description</td>
+            <td>The image url to display an alternative image in case the original image could not be loaded. Similiar to <code>(error)="src=./assets/no-image.png"</code></td>
+        </tr>
+        <tr>
+            <td>Attribute</td>
+            <td><code>srcFallback</code></td>
         </tr>
         <tr>
             <td>Type</td>
@@ -226,7 +246,7 @@ Add `ionImgViewer` as a directive within the `ion-img` HTML element of your modu
     <tbody>
         <tr>
             <td>Description</td>
-            <td>The Image URL to display a high-resolution image instead of the original image when opening the viewer.</td>
+            <td>The image url to display a high-resolution image instead of the original image when opening the viewer.</td>
         </tr>
         <tr>
             <td>Attribute</td>

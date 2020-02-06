@@ -21,6 +21,7 @@ export class NgxIonicImageViewerComponent implements OnInit {
   @Input() scheme?: string;
   @Input() slideOptions?: object;
   @Input() src: string;
+  @Input() srcFallback?: string;
   @Input() srcHighRes?: string;
   @Input() swipeToClose?: boolean;
   @Input() text?: string;
@@ -30,6 +31,7 @@ export class NgxIonicImageViewerComponent implements OnInit {
 
   async viewImage(
     src: string,
+    srcFallback: string = '',
     srcHighRes: string = '',
     title: string = '',
     text: string = '',
@@ -41,6 +43,7 @@ export class NgxIonicImageViewerComponent implements OnInit {
       component: ViewerModalComponent,
       componentProps: {
         src,
+        srcFallback,
         srcHighRes,
         title,
         text,

@@ -1,7 +1,9 @@
 <ion-header [ngClass]="{ 'no-title': title.length <= 0 }">
   <ion-toolbar>
     <ion-buttons slot="primary">
-      <ion-button (click)="closeModal()"> <ion-icon slot="icon-only" name="close"></ion-icon> </ion-button>
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
     </ion-buttons>
     <ion-title>{{ title }}</ion-title>
   </ion-toolbar>
@@ -11,7 +13,7 @@
   <ion-slides [options]="options" #sliderRef>
     <ion-slide>
       <div class="swiper-zoom-container">
-        <img alt="alt" [src]="src" />
+        <img [alt]="this.alt" [src]="this.src" (error)="onError($event)" />
       </div>
     </ion-slide>
   </ion-slides>
