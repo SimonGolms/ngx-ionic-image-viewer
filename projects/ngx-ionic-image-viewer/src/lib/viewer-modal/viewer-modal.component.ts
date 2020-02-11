@@ -47,12 +47,20 @@ export class ViewerModalComponent implements OnInit {
 
   constructor(private modalController: ModalController) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     this.options = { ...this.defaultSlideOptions, ...this.slideOptions };
     this.src = this.srcHighRes || this.src;
     this.setStyle();
     this.setScheme(this.scheme);
     this.initSwipeToClose(this.swipeToClose);
+
+    /**
+     * Current Workaround
+     * See reported bug: https://github.com/ionic-team/ionic/issues/19638#issuecomment-584828315
+     * Hint: Comment in '<ion-slide>' in component
+     */
+    const swiper = await this.slides.getSwiper();
+    swiper.appendSlide(`<ion-slide><img alt=${this.alt} src="${this.src}" (error)="(onError($event))"/></ion-slide>`);
   }
 
   setStyle() {
@@ -194,6 +202,7 @@ export class ViewerModalComponent implements OnInit {
   }
 
   onError(error) {
+    console.log('TCL: ViewerModalComponent -> onError -> error', error);
     if (this.srcFallback) {
       this.src = this.srcFallback;
     }
