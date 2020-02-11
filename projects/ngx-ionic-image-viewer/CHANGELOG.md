@@ -1,3 +1,11 @@
+<a name="0.5.2"></a>
+## [0.5.2](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.5.1...v0.5.2) (2020-02-11)
+
+
+### Bug Fixes
+
+* images behave correctly after being viewed several times ([445ad78](https://github.com/simongolms/ngx-ionic-image-viewer/commit/445ad78)), closes [#14](https://github.com/simongolms/ngx-ionic-image-viewer/issues/14) [#16](https://github.com/simongolms/ngx-ionic-image-viewer/issues/16)
+
 <a name="0.5.1"></a>
 ## [0.5.1](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.5.0...v0.5.1) (2020-02-06)
 
