@@ -16,6 +16,7 @@ export class ViewerModalComponent implements OnInit {
   @Input() swipeToClose?: boolean;
   @Input() text?: string;
   @Input() title?: string;
+  @Input() titleSize?: string;
 
   defaultSlideOptions = {
     centeredSlides: true,

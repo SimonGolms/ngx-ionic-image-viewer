@@ -341,6 +341,26 @@ Add `ionImgViewer` as a directive within the `ion-img` HTML element of your modu
             <td><code>string</code> | <code>undefined</code></td>
         </tr>
     </tbody>
+    <!-- titleSize -->
+    <thead>
+        <tr>
+            <th colspan="2" align="left"><h3>titleSize</h3></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Description</td>
+            <td>The size of the title.</td>
+        </tr>
+        <tr>
+            <td>Attribute</td>
+            <td><code>titleSize</code></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><code>"large"</code> | <code>"small"</code> | <code>undefined</code></td>
+        </tr>
+    </tbody>
 </table>
 
 ## Workspace

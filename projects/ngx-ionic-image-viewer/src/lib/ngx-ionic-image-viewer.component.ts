@@ -27,6 +27,7 @@ export class NgxIonicImageViewerComponent implements OnInit {
   @Input() swipeToClose?: boolean;
   @Input() text?: string;
   @Input() title?: string;
+  @Input() titleSize?: string;
 
   constructor(public modalController: ModalController) {}
 
@@ -35,6 +36,7 @@ export class NgxIonicImageViewerComponent implements OnInit {
     srcFallback: string = '',
     srcHighRes: string = '',
     title: string = '',
+    titleSize: string = '',
     text: string = '',
     scheme: string = 'auto',
     slideOptions: object = {},
@@ -47,6 +49,7 @@ export class NgxIonicImageViewerComponent implements OnInit {
         srcFallback,
         srcHighRes,
         title,
+        titleSize,
         text,
         scheme,
         slideOptions,
