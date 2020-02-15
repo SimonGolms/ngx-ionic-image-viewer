@@ -8,6 +8,7 @@ import { ViewerModalComponent } from './viewer-modal/viewer-modal.component';
 export class NgxIonicImageViewerDirective implements OnInit {
   constructor(private el: ElementRef, private renderer: Renderer2, public modalController: ModalController) {}
 
+  @Input() cssClass?: string | string[];
   @Input() scheme?: string;
   @Input() slideOptions?: object;
   @Input() src: string;
@@ -58,7 +59,7 @@ export class NgxIonicImageViewerDirective implements OnInit {
         slideOptions,
         swipeToClose
       },
-      cssClass: 'ion-img-viewer',
+      cssClass: this.cssClass instanceof Array ? ['ion-img-viewer', ...this.cssClass] : ['ion-img-viewer', this.cssClass],
       keyboardClose: true,
       showBackdrop: true
     });
