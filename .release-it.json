@@ -20,7 +20,7 @@
   },
   "hooks": {
     "after:bump": "cd ./../../ && npm run build",
-    "before:git:beforeRelease": "cp CHANGELOG.md ./../../",
+    "before:git:beforeRelease": "cd ./../../ && cp projects/ngx-ionic-image-viewer/CHANGELOG.md . && git add CHANGELOG.md --update ",
     "after:release": "echo 🎉 Successfully released ${name} v${version} to ${repo.repository}."
   }
 }
