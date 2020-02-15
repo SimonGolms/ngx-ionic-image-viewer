@@ -64,7 +64,7 @@ export class ViewerModalComponent implements OnInit {
   }
 
   setStyle() {
-    const el: HTMLElement = document.querySelector('.modal-fullscreen');
+    const el: HTMLElement = document.querySelector('.ion-img-viewer');
     el.style.setProperty('--height', '100%');
     el.style.setProperty('--width', '100%');
     el.style.setProperty('--border-radius', '0');
@@ -75,7 +75,7 @@ export class ViewerModalComponent implements OnInit {
       return;
     }
 
-    const el: HTMLElement = document.querySelector('.modal-fullscreen');
+    const el: HTMLElement = document.querySelector('.ion-img-viewer');
 
     if (this.scheme === 'light') {
       el.style.setProperty('--ion-background-color', '#ffffff');

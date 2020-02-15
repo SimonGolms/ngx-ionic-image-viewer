@@ -51,7 +51,7 @@ export class NgxIonicImageViewerComponent implements OnInit {
         slideOptions,
         swipeToClose
       },
-      cssClass: 'modal-fullscreen',
+      cssClass: 'ion-img-viewer',
       keyboardClose: true,
       showBackdrop: true
     });
