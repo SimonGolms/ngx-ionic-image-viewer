@@ -1,3 +1,12 @@
+<a name="0.6.0"></a>
+# [0.6.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.5.2...v0.6.0) (2020-02-17)
+
+
+### Features
+
+* apply additional class for custom CSS ([fa941a2](https://github.com/simongolms/ngx-ionic-image-viewer/commit/fa941a2))
+* set the size of the title ([8bdac98](https://github.com/simongolms/ngx-ionic-image-viewer/commit/8bdac98))
+
 <a name="0.5.2"></a>
 ## [0.5.2](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.5.1...v0.5.2) (2020-02-11)
 
