@@ -8,6 +8,7 @@ import { ViewerModalComponent } from './viewer-modal/viewer-modal.component';
 export class NgxIonicImageViewerDirective implements OnInit {
   constructor(private el: ElementRef, private renderer: Renderer2, public modalController: ModalController) {}
 
+  @Input() cssClass?: string | string[];
   @Input() scheme?: string;
   @Input() slideOptions?: object;
   @Input() src: string;
@@ -16,9 +17,20 @@ export class NgxIonicImageViewerDirective implements OnInit {
   @Input() swipeToClose?: boolean;
   @Input() text?: string;
   @Input() title?: string;
+  @Input() titleSize?: string;
 
   @HostListener('click') onClick() {
-    this.viewImage(this.src, this.srcFallback, this.srcHighRes, this.title, this.text, this.scheme, this.slideOptions, this.swipeToClose);
+    this.viewImage(
+      this.src,
+      this.srcFallback,
+      this.srcHighRes,
+      this.title,
+      this.titleSize,
+      this.text,
+      this.scheme,
+      this.slideOptions,
+      this.swipeToClose
+    );
   }
 
   @HostListener('error', ['$event']) onError(error) {
@@ -41,6 +53,7 @@ export class NgxIonicImageViewerDirective implements OnInit {
     srcFallback: string = '',
     srcHighRes: string = '',
     title: string = '',
+    titleSize: string = '',
     text: string = '',
     scheme: string = 'auto',
     slideOptions: object = {},
@@ -53,12 +66,13 @@ export class NgxIonicImageViewerDirective implements OnInit {
         srcFallback,
         srcHighRes,
         title,
+        titleSize,
         text,
         scheme,
         slideOptions,
         swipeToClose
       },
-      cssClass: 'modal-fullscreen',
+      cssClass: this.cssClass instanceof Array ? ['ion-img-viewer', ...this.cssClass] : ['ion-img-viewer', this.cssClass],
       keyboardClose: true,
       showBackdrop: true
     });
