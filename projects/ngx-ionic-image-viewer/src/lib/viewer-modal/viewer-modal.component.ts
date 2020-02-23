@@ -61,7 +61,7 @@ export class ViewerModalComponent implements OnInit {
      * Hint: Comment in '<ion-slide>' in component
      */
     const swiper = await this.slides.getSwiper();
-    swiper.appendSlide(`<ion-slide><img alt=${this.alt} src="${this.src}" (error)="(onError($event))"/></ion-slide>`);
+    swiper.appendSlide(`<ion-slide><img alt="${this.alt}" src="${this.src}" (error)="(onError($event))"/></ion-slide>`);
   }
 
   setStyle() {
