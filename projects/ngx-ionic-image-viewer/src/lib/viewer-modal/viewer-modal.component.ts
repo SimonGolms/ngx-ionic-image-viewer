@@ -203,7 +203,6 @@ export class ViewerModalComponent implements OnInit {
   }
 
   onError(error) {
-    console.log('TCL: ViewerModalComponent -> onError -> error', error);
     if (this.srcFallback) {
       this.src = this.srcFallback;
     }
