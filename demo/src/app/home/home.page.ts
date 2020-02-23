@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IonToggle } from '@ionic/angular';
+import { IonToggle, ModalController } from '@ionic/angular';
+import { ViewerModalComponent } from 'ngx-ionic-image-viewer';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,6 @@ import { IonToggle } from '@ionic/angular';
 export class HomePage implements OnInit {
   prefersDark = false;
 
-  // imgUrl = `./../../assets/img/silhoutte.jpg`; // Use for local development
   imgUrl = `https://images.unsplash.com/reserve/Af0sF2OS5S5gatqrKzVP_Silhoutte.jpg?&q=80`;
 
   imgAvatar = {
@@ -25,7 +25,7 @@ export class HomePage implements OnInit {
     author: 'Rachel Davis'
   };
 
-  constructor() {}
+  constructor(public modalController: ModalController) {}
 
   ngOnInit() {
     if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -36,5 +36,21 @@ export class HomePage implements OnInit {
   toggleTheme() {
     this.prefersDark = !this.prefersDark;
     document.body.classList.toggle('dark', this.prefersDark);
+  }
+
+  async openViewer() {
+    const modal = await this.modalController.create({
+      component: ViewerModalComponent,
+      componentProps: {
+        src: this.imgUrl, // required
+        title: 'Silhoutte (Programmatic)', // optional
+        text: 'Photo by Mayur Gala on Unsplash' // optional
+      },
+      cssClass: 'ion-img-viewer', // required
+      keyboardClose: true,
+      showBackdrop: true
+    });
+
+    return await modal.present();
   }
 }
