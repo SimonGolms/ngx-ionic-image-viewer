@@ -37,6 +37,7 @@
   - [Import](#import)
   - [Component](#component)
   - [Directive](#directive)
+  - [Controller](#controller)
 - [Properties](#properties)
 - [Workspace](#workspace)
   - [Local Development](#local-development)
@@ -124,6 +125,39 @@ Add `ionImgViewer` as a directive within the `ion-img` HTML element of your modu
   scheme="light" 
   src="./assets/img/demo.jpg">
 </ion-img>
+```
+
+### Controller
+
+Import `ViewerModalComponent` from `ngx-ionic-image-viewer` and add it to the `ModalController`. Within the `componentProps`, all available properties can be passed, whereby `src` is always required. In addition you must add the css class `ion-img-viewer` to the property `cssClass`.
+Use `cssClass: ['ion-img-viewer', 'my-custom-ion-img-viewer']`in case you want to add more css classes.
+
+```js
+import { ModalController } from '@ionic/angular';
+import { ViewerModalComponent } from 'ngx-ionic-image-viewer';
+
+export class HomePage {
+
+  constructor(public modalController: ModalController) {}
+
+  async openViewer() {
+    const modal = await this.modalController.create({
+      component: ViewerModalComponent,
+      componentProps: {
+        src: "./assets/img/demo.jpg"
+      },
+      cssClass: 'ion-img-viewer'
+      keyboardClose: true,
+      showBackdrop: true
+    });
+
+    return await modal.present();
+  }
+}
+```
+
+```html
+<ion-button (click)="openViewer()">Open Viewer</ion-button>
 ```
 
 ## Properties
