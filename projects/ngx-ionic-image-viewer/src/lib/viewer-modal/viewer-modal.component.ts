@@ -7,16 +7,18 @@ import { ModalController, IonSlides } from '@ionic/angular';
   styleUrls: ['./viewer-modal.component.scss']
 })
 export class ViewerModalComponent implements OnInit {
-  @Input() alt?: string;
-  @Input() scheme?: string;
-  @Input() slideOptions?: object;
+  // tslint:disable: no-inferrable-types
+  @Input() alt?: string = '';
+  @Input() scheme?: string = 'auto';
+  @Input() slideOptions?: object = {};
   @Input() src: string;
-  @Input() srcFallback?: string;
-  @Input() srcHighRes?: string;
-  @Input() swipeToClose?: boolean;
-  @Input() text?: string;
-  @Input() title?: string;
-  @Input() titleSize?: string;
+  @Input() srcFallback?: string = '';
+  @Input() srcHighRes?: string = '';
+  @Input() swipeToClose?: boolean = true;
+  @Input() text?: string = '';
+  @Input() title?: string = '';
+  @Input() titleSize?: string = '';
+  // tslint:enable: no-inferrable-types
 
   defaultSlideOptions = {
     centeredSlides: true,
@@ -61,7 +63,7 @@ export class ViewerModalComponent implements OnInit {
      * Hint: Comment in '<ion-slide>' in component
      */
     const swiper = await this.slides.getSwiper();
-    swiper.appendSlide(`<ion-slide><img alt=${this.alt} src="${this.src}" (error)="(onError($event))"/></ion-slide>`);
+    swiper.appendSlide(`<ion-slide><img alt="${this.alt}" src="${this.src}" (error)="(onError($event))"/></ion-slide>`);
   }
 
   setStyle() {
@@ -203,7 +205,6 @@ export class ViewerModalComponent implements OnInit {
   }
 
   onError(error) {
-    console.log('TCL: ViewerModalComponent -> onError -> error', error);
     if (this.srcFallback) {
       this.src = this.srcFallback;
     }
