@@ -1,3 +1,17 @@
+<a name="0.7.0"></a>
+# [0.7.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.6.0...v0.7.0) (2020-02-23)
+
+
+### Bug Fixes
+
+* remove console log output ([65cb629](https://github.com/simongolms/ngx-ionic-image-viewer/commit/65cb629))
+* when specified `alt` the image was not showen in some cases ([d7af54c](https://github.com/simongolms/ngx-ionic-image-viewer/commit/d7af54c))
+
+
+### Features
+
+* the viewer-modal can be used as a controller component ([6d8fb45](https://github.com/simongolms/ngx-ionic-image-viewer/commit/6d8fb45))
+
 <a name="0.6.0"></a>
 # [0.6.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.5.2...v0.6.0) (2020-02-17)
 
