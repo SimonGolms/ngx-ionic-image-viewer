@@ -39,8 +39,8 @@
     "url": "https://github.com/simongolms/ngx-ionic-image-viewer/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^8.2.13",
-    "@angular/core": "^8.2.13",
-    "@ionic/angular": "4.0.0"
+    "@angular/common": ">=8.2.13",
+    "@angular/core": ">=8.2.13",
+    "@ionic/angular": ">=4.0.0"
   }
 }
