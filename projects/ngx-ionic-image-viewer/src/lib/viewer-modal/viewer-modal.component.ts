@@ -4,7 +4,7 @@ import { ModalController, IonSlides } from '@ionic/angular';
 @Component({
   selector: 'ion-viewer-modal',
   templateUrl: './viewer-modal.component.html',
-  styleUrls: ['./viewer-modal.component.scss']
+  styleUrls: ['./viewer-modal.component.scss'],
 })
 export class ViewerModalComponent implements OnInit {
   // tslint:disable: no-inferrable-types
@@ -24,8 +24,8 @@ export class ViewerModalComponent implements OnInit {
     centeredSlides: true,
     passiveListeners: false,
     zoom: {
-      enabled: true
-    }
+      enabled: true,
+    },
   };
 
   options = {};
@@ -43,7 +43,7 @@ export class ViewerModalComponent implements OnInit {
     restraint: 100, // maximum distance allowed at the same time in perpendicular direction
     allowedTime: 500, // maximum time allowed to travel that distance
     elapsedTime: 0,
-    startTime: 0
+    startTime: 0,
   };
 
   @ViewChild('sliderRef', { static: true }) slides: IonSlides;
@@ -63,7 +63,7 @@ export class ViewerModalComponent implements OnInit {
      * Hint: Comment in '<ion-slide>' in component
      */
     const swiper = await this.slides.getSwiper();
-    swiper.appendSlide(`<ion-slide><img alt="${this.alt}" src="${this.src}" (error)="(onError($event))"/></ion-slide>`);
+    swiper.appendSlide(`<ion-slide><img alt="${this.alt}" src="${this.src}" onerror="this.src='${this.srcFallback}'"/></ion-slide>`);
   }
 
   setStyle() {
@@ -109,14 +109,14 @@ export class ViewerModalComponent implements OnInit {
     }
 
     const el = document.querySelector('ion-modal');
-    el.addEventListener('mousedown', event => this.swipeStart(event), true);
-    el.addEventListener('mousemove', event => this.swipeMove(event), true);
-    el.addEventListener('mouseup', event => this.swipeEnd(event), true);
-    el.addEventListener('touchstart', event => this.swipeStart(event), true);
-    el.addEventListener('touchmove', event => this.swipeMove(event), true);
-    el.addEventListener('touchend', event => this.swipeEnd(event), true);
+    el.addEventListener('mousedown', (event) => this.swipeStart(event), true);
+    el.addEventListener('mousemove', (event) => this.swipeMove(event), true);
+    el.addEventListener('mouseup', (event) => this.swipeEnd(event), true);
+    el.addEventListener('touchstart', (event) => this.swipeStart(event), true);
+    el.addEventListener('touchmove', (event) => this.swipeMove(event), true);
+    el.addEventListener('touchend', (event) => this.swipeEnd(event), true);
 
-    this.modalController.getTop().then(modal => {
+    this.modalController.getTop().then((modal) => {
       modal.onWillDismiss().then(() => {
         document.removeEventListener('mousedown', this.swipeStart, true);
         document.removeEventListener('mousemove', this.swipeMove, true);
@@ -138,7 +138,7 @@ export class ViewerModalComponent implements OnInit {
       distance: 0,
       startX: pageX,
       startY: pageY,
-      startTime: new Date().getTime()
+      startTime: new Date().getTime(),
     };
   }
 
@@ -169,7 +169,7 @@ export class ViewerModalComponent implements OnInit {
       direction,
       distance,
       distanceX,
-      distanceY
+      distanceY,
     };
     event.preventDefault();
   }
@@ -196,17 +196,11 @@ export class ViewerModalComponent implements OnInit {
     this.swipeState = {
       ...this.swipeState,
       phase: 'end',
-      swipeType
+      swipeType,
     };
 
     if (swipeType === 'down') {
       return this.closeModal();
-    }
-  }
-
-  onError(error) {
-    if (this.srcFallback) {
-      this.src = this.srcFallback;
     }
   }
 
