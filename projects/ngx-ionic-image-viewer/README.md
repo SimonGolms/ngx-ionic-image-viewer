@@ -25,7 +25,7 @@
 
 ## Demo <!-- omit in toc -->
 
-[Live Demo](https://ionic4-image-viewer-example.netlify.com/home) | [Stackblitz](https://stackblitz.com/github/SimonGolms/ngx-ionic-image-viewer/tree/master/demo)
+[Live Demo](https://ionic4-image-viewer-example.netlify.com) | [Stackblitz](https://stackblitz.com/github/SimonGolms/ngx-ionic-image-viewer/tree/master/demo)
 
 ![ngx-ionic-image-viewer-showcase](https://github.com/SimonGolms/ngx-ionic-image-viewer/raw/master/docs/showcase.gif)
 

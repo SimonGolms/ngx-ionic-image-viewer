@@ -1,3 +1,11 @@
+<a name="0.7.1"></a>
+## [0.7.1](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.7.0...v0.7.1) (2020-05-31)
+
+
+### Bug Fixes
+
+* srcFallback not working on controller ([a0b0bfc](https://github.com/simongolms/ngx-ionic-image-viewer/commit/a0b0bfc)), closes [#28](https://github.com/simongolms/ngx-ionic-image-viewer/issues/28)
+
 <a name="0.7.0"></a>
 # [0.7.0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.6.0...v0.7.0) (2020-02-23)
 
