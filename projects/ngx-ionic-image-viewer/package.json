@@ -1,6 +1,6 @@
 {
   "name": "ngx-ionic-image-viewer",
-  "version": "0.7.1",
+  "version": "0.7.3-0",
   "description": "An Ionic 4 Angular module to view & zoom on images and photos without any additional dependencies.",
   "keywords": [
     "ionic",
@@ -39,8 +39,8 @@
     "url": "https://github.com/simongolms/ngx-ionic-image-viewer/issues"
   },
   "peerDependencies": {
-    "@angular/common": "^8.2.13",
-    "@angular/core": "^8.2.13",
-    "@ionic/angular": "4.0.0"
+    "@angular/common": ">=8.2.13",
+    "@angular/core": ">=8.2.13",
+    "@ionic/angular": ">=4.0.0"
   }
 }

@@ -1,3 +1,11 @@
+<a name="0.7.3-0"></a>
+## [0.7.3-0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.7.1...v0.7.3-0) (2020-10-05)
+
+
+### Bug Fixes
+
+* omit peer dependencies warning ([ac64084](https://github.com/simongolms/ngx-ionic-image-viewer/commit/ac64084)), closes [#43](https://github.com/simongolms/ngx-ionic-image-viewer/issues/43) [#46](https://github.com/simongolms/ngx-ionic-image-viewer/issues/46)
+
 <a name="0.7.1"></a>
 ## [0.7.1](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.7.0...v0.7.1) (2020-05-31)
 
