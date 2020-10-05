@@ -5,7 +5,7 @@ import { ViewerModalComponent } from 'ngx-ionic-image-viewer';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss']
+  styleUrls: ['home.page.scss'],
 })
 export class HomePage implements OnInit {
   prefersDark = false;
@@ -14,15 +14,15 @@ export class HomePage implements OnInit {
 
   imgAvatar = {
     id: 237,
-    src: 'https://i.picsum.photos/id/237/200/200.jpg',
-    srcHighRes: 'https://i.picsum.photos/id/237/3500/2095.jpg',
-    author: 'André Spieker'
+    src: 'https://picsum.photos/id/237/200/200.jpg',
+    srcHighRes: 'https://picsum.photos/id/237/3500/2095.jpg',
+    author: 'André Spieker',
   };
   imgThumbnail = {
     id: 1040,
-    src: 'https://i.picsum.photos/id/1040/200/200.jpg',
-    srcHighRes: 'https://i.picsum.photos/id/1040/4496/3000.jpg',
-    author: 'Rachel Davis'
+    src: 'https://picsum.photos/id/1040/200/200.jpg',
+    srcHighRes: 'https://picsum.photos/id/1040/4496/3000.jpg',
+    author: 'Rachel Davis',
   };
 
   constructor(public modalController: ModalController) {}
@@ -44,11 +44,11 @@ export class HomePage implements OnInit {
       componentProps: {
         src: this.imgUrl, // required
         title: 'Silhoutte (Programmatic)', // optional
-        text: 'Photo by Mayur Gala on Unsplash' // optional
+        text: 'Photo by Mayur Gala on Unsplash', // optional
       },
       cssClass: 'ion-img-viewer', // required
       keyboardClose: true,
-      showBackdrop: true
+      showBackdrop: true,
     });
 
     return await modal.present();
