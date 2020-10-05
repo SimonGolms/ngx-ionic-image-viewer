@@ -1,3 +1,6 @@
+<a name="0.7.4-0"></a>
+## [0.7.4-0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.7.3-0...v0.7.4-0) (2020-10-05)
+
 <a name="0.7.3-0"></a>
 ## [0.7.3-0](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.7.1...v0.7.3-0) (2020-10-05)
 
