@@ -146,7 +146,7 @@ export class HomePage {
       componentProps: {
         src: "./assets/img/demo.jpg"
       },
-      cssClass: 'ion-img-viewer'
+      cssClass: 'ion-img-viewer',
       keyboardClose: true,
       showBackdrop: true
     });
