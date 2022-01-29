@@ -1,3 +1,11 @@
+<a name="0.7.5"></a>
+## [0.7.5](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.7.4...v0.7.5) (2022-01-29)
+
+
+### Bug Fixes
+
+* add deprecation information ([b20b7be](https://github.com/simongolms/ngx-ionic-image-viewer/commit/b20b7be))
+
 <a name="0.7.4"></a>
 ## [0.7.4](https://github.com/simongolms/ngx-ionic-image-viewer/compare/v0.7.4-0...v0.7.4) (2020-10-05)
 
