@@ -1,3 +1,5 @@
+**ℹ️ Please note that this package has reached its end. After getting into the React world 2018, I lost the contact into the Angular Ecosystem. With Ionic 6, Slider.js will also be split off, which will probably make this package incompatible for now. Unfortunately I don't have the time to develop this package further according to the demands - thank you for your trust and responses, I appreciated it very much. Feel free to fork this package and work on a successor. You will find here a good tutorial how to create your own image viewer, which is based on the same approach: https://www.youtube.com/watch?v=VCUpRkRi00w**
+
 # ngx-ionic-image-viewer <!-- omit in toc -->
 
 <p>
@@ -8,7 +10,7 @@
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
   <a href="https://github.com/simongolms/ngx-ionic-image-viewer/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
+    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-no-red.svg" />
   </a>
   <a href="https://conventionalcommits.org" target="_blank">
     <img alt="Conventional Commits" src="https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg" />
@@ -105,11 +107,12 @@ export class HomePageModule {}
 Add `ion-img-viewer` within the HTML of your module (e.g. `home.page.html`)
 
 ```html
-<ion-img-viewer 
-  title="Demo" 
-  text="Component" 
-  scheme="dark" 
-  src="./assets/img/demo.jpg">
+<ion-img-viewer
+  title="Demo"
+  text="Component"
+  scheme="dark"
+  src="./assets/img/demo.jpg"
+>
 </ion-img-viewer>
 ```
 
@@ -118,12 +121,13 @@ Add `ion-img-viewer` within the HTML of your module (e.g. `home.page.html`)
 Add `ionImgViewer` as a directive within the `ion-img` HTML element of your module (e.g. `home.page.html`)
 
 ```html
-<ion-img 
-  ionImgViewer 
-  title="Demo" 
-  text="Directive" 
-  scheme="light" 
-  src="./assets/img/demo.jpg">
+<ion-img
+  ionImgViewer
+  title="Demo"
+  text="Directive"
+  scheme="light"
+  src="./assets/img/demo.jpg"
+>
 </ion-img>
 ```
 
@@ -403,7 +407,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Local Development
 
-1. Run the command to start the build every time a file change: 
+1. Run the command to start the build every time a file change:
 
    ```bash
    npm run build:watch
